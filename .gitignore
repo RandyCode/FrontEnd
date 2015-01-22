@@ -7,6 +7,8 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+TemplateFrontend/bin/*
+TemplateFrontend/logs/*
 
 # Windows Installer files
 *.cab

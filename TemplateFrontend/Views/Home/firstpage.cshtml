@@ -1,0 +1,22 @@
+﻿@{
+    Layout = Url.Content("~/Views/Template/base.cshtml");
+}
+
+@section script{
+  
+}
+
+@section body{
+    <section class="bg">
+            <div class="container" id="content">
+                <h1> First Page</h1>
+                <p>REQUEST: @HttpContext.Current.Request.Url</p>
+                <p> UserHostAddress: @HttpContext.Current.Request.UserHostAddress</p>
+                <p>Server: @HttpContext.Current.Server.MachineName</p>
+  
+            </div>
+    </section>
+
+
+
+}

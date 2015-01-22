@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateFrontend", "TemplateFrontend\TemplateFrontend.csproj", "{4C8126A2-AE2D-491A-83D7-F680DFA3F454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontendCore", "Controllers\FrontendCore.csproj", "{8F51EDBC-6A02-4ED2-B185-E1844D47F701}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C8126A2-AE2D-491A-83D7-F680DFA3F454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8126A2-AE2D-491A-83D7-F680DFA3F454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8126A2-AE2D-491A-83D7-F680DFA3F454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8126A2-AE2D-491A-83D7-F680DFA3F454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F51EDBC-6A02-4ED2-B185-E1844D47F701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F51EDBC-6A02-4ED2-B185-E1844D47F701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F51EDBC-6A02-4ED2-B185-E1844D47F701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F51EDBC-6A02-4ED2-B185-E1844D47F701}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

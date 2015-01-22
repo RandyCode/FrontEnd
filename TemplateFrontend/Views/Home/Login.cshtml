@@ -1,0 +1,42 @@
+﻿@{
+    Layout = Url.Content("~/Views/Template/dialog.cshtml");
+}
+
+@section title {
+    <h3 style="font-weight:bold">Login</h3>
+}
+
+@section body{
+
+    <form id="form_signin_consumer" role="form">
+
+        <div class="form-group">
+            <label for="email">EmailAddress</label>
+            <input id="email" name="email" value="" type="email" class="form-control" minlength="6" maxlength="50" required placeholder="Email address" autofocus />
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="pwd" value="" type="password" class="form-control" minlength="6" maxlength="20" required placeholder="Password" />
+        </div>
+
+    </form>
+
+}
+
+@section function{
+@*<script src="~/Bootstrap/js/jquery.min.js"></script>*@
+    <button type="submit" class="btn btn-success" id="signin" onclick="submit();">Signin</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal" id="signup" >CreateUser</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="">ForgotPassword</button>
+    <script>
+        function submit() {
+            var data = $("#form_signin_consumer").serialize();
+            $.post("/home/login", data, function (json) {
+                location.href = "/home/firstpage";
+            }, "json");
+        }
+
+    </script>
+
+}

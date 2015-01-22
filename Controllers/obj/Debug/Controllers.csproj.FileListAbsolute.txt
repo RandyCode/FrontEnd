@@ -1,0 +1,4 @@
+C:\Users\Randy\Desktop\Frontend\Web\Bin\Controllers.dll
+C:\Users\Randy\Desktop\Frontend\Web\Bin\Controllers.pdb
+C:\Users\Randy\Desktop\Frontend\TemplateFrontend\Controllers\obj\Debug\Controllers.dll
+C:\Users\Randy\Desktop\Frontend\TemplateFrontend\Controllers\obj\Debug\Controllers.pdb
