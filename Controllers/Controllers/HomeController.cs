@@ -30,6 +30,7 @@ namespace FrontendCore
             //Session["User"] = string.Format("{0},{1}", email, pwd);
             //SetCookie("User", email, DateTime.Now.AddDays(1));
             Cache.Store("User", email + pwd);
+ 
             return Json("randy"); 
         }
 

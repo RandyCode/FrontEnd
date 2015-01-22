@@ -15,7 +15,8 @@ namespace FrontendCore.Utilities
         {
             get
             {
-                if (_distrubutedCache == null) _distrubutedCache = CacheFactory.CreateCache();
+                if (_distrubutedCache == null)
+                    _distrubutedCache = CacheFactory.CreateCache();
                 return Tools._distrubutedCache;
             }
             set { Tools._distrubutedCache = value; }

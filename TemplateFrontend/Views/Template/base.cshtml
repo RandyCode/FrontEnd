@@ -59,13 +59,13 @@
                         </ul>
 
                         <form class="navbar-form navbar-right">
-                            @if (Session["User"] == null)
+                            @if (FrontendCore.Utilities.Tools.DistrubutedCache.Get("User")==null)
                             {
                                 <input id="logIn" type="button" value="Log In" class="btn btn-success" />
                             }
                             else
                             {
-                                <label class="label">@Session["User"]</label> 
+                                <label class="label">@FrontendCore.Utilities.Tools.DistrubutedCache.Get("User")</label> 
                                 <input id="SignOut" type="button" value="Sign Out" class="btn btn-success" />
                             }
                             <input id="MessageMe" type="button" value="Message Me" class="btn btn-primary" />
