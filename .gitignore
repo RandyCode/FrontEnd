@@ -6,9 +6,12 @@ ehthumbs.db
 Desktop.ini
 
 # Recycle Bin used on file shares
+!*.dll
 $RECYCLE.BIN/
 TemplateFrontend/bin/*
+TemplateFrontend/obj/*
 TemplateFrontend/logs/*
+
 
 # Windows Installer files
 *.cab
