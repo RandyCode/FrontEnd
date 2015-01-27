@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Randy.Memcached;
+using System.Web;
 
 namespace FrontendCore.Cache
 {
@@ -13,32 +11,50 @@ namespace FrontendCore.Cache
         public WebCache()
         {
             if (_cache == null)
-                _cache = new System.Web.Caching.Cache();
+                _cache = HttpRuntime.Cache;
         }
 
         public T Get<T>(string key)
         {
-            throw new NotImplementedException();
+            return (T)Get(key);
         }
 
         public object Get(string key)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var obj = _cache.Get(key);
+                return obj;
+            }
+            catch {
+                return null;
+            }               
         }
 
         public void Remove(string key)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _cache.Remove(key);
+            }
+            catch
+            {
+                throw new Exception("Cache is not exist this key");
+            }            
+
         }
 
         public void Store(string key, object value, DateTime expiresAt)
         {
-            throw new NotImplementedException();
+            //绝对过期
+            _cache.Insert(key, value, null, expiresAt, System.Web.Caching.Cache.NoSlidingExpiration);
+            //滑动过期时间 
+            //_cache.Insert(key, value, null, System.Web.Caching.Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
         }
 
         public void Store(string key, object value)
         {
-            throw new NotImplementedException();
+            _cache.Insert(key, value);
         }
     }
 }

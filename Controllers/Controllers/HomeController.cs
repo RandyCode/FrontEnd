@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Xml;
 using System.Net.NetworkInformation;
 using System.Net;
+using System.Web;
 
 
 
@@ -29,14 +30,14 @@ namespace FrontendCore
         {
             //Session["User"] = string.Format("{0},{1}", email, pwd);
             //SetCookie("User", email, DateTime.Now.AddDays(1));
-            Cache.Store("User", email + pwd);
+            //Cache.Store("User", email + pwd);
  
             return Json("randy"); 
         }
 
         public JsonResult SignOut()
         {
-            Cache.Remove("User");
+            //Cache.Remove("User");
             return Json("randy");
         }
 

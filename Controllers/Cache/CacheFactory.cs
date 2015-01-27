@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Randy.Memcached;
+using System.Configuration;
 
 namespace FrontendCore.Cache
 {
@@ -10,7 +11,11 @@ namespace FrontendCore.Cache
     {
         public static ICache CreateCache()
         {
-            return new Memcache();
+            var nodes = ConfigurationManager.AppSettings["memcachedNodes"];
+            if (nodes == null)
+                return new WebCache();
+            else
+                return new Memcache();
         }
     }
 }

@@ -24,6 +24,8 @@ C:\Users\Randy\Documents\GitHub\Frontend\FrontEnd\Controllers\bin\Randy.Memcache
 C:\Users\Randy\Documents\GitHub\Frontend\FrontEnd\Controllers\obj\Debug\FrontendCore.csprojResolveAssemblyReference.cache
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\FrontendCore.dll
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\FrontendCore.pdb
-C:\Users\Randy\Documents\GitHub\Frontend\Controllers\obj\Debug\FrontendCore.csprojResolveAssemblyReference.cache
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\obj\Debug\FrontendCore.dll
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\obj\Debug\FrontendCore.pdb
+C:\Users\Randy\Documents\GitHub\Frontend\Web\bin\FrontendCore.dll
+C:\Users\Randy\Documents\GitHub\Frontend\Web\bin\FrontendCore.pdb
+C:\Users\Randy\Documents\GitHub\Frontend\Controllers\obj\Debug\FrontendCore.csprojResolveAssemblyReference.cache

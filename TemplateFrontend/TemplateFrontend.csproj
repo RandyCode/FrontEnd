@@ -39,10 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Common.dll</HintPath>
-    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\log4net.dll</HintPath>
@@ -69,10 +65,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -129,23 +121,25 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Bootstrap\css\bootstrap-theme.css" />
-    <Content Include="Bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="Bootstrap\css\bootstrap.css" />
-    <Content Include="Bootstrap\css\bootstrap.min.css" />
-    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Bootstrap\js\bootstrap.js" />
-    <Content Include="Bootstrap\js\bootstrap.min.js" />
-    <Content Include="Bootstrap\js\Chart.min.js" />
-    <Content Include="Bootstrap\js\jqBootstrapValidation.js" />
-    <Content Include="Bootstrap\js\jquery.min.js" />
-    <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="Css\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Css\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Css\bootstrap\css\bootstrap.css" />
+    <Content Include="Css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Css\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="img\home_bg.jpg" />
     <Content Include="img\mail.png" />
     <Content Include="img\me-dev.svg" />
     <Content Include="img\me.svg" />
+    <Content Include="Js\bootstrap\bootstrap.js" />
+    <Content Include="Js\bootstrap\bootstrap.min.js" />
+    <Content Include="Js\bootstrap\npm.js" />
+    <Content Include="Js\main.js" />
     <Content Include="Js\master.js" />
+    <Content Include="Js\require.js" />
+    <Content Include="Js\utility\Chart.min.js" />
+    <Content Include="Js\utility\jqBootstrapValidation.js" />
+    <Content Include="Js\utility\jquery.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -170,13 +164,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="Bootstrap\css\bootstrap.css.map" />
-    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Template\base.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +177,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\firstpage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Css\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Css\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Css\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Css\bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

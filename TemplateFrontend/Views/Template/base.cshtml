@@ -8,28 +8,27 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Bootstrap/js/jquery.min.js"></script>
-    <script src="~/Bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/Js/master.js"></script>
+    <link href="~/Css/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    @*<script src="~/Js/utility/jquery.min.js"></script>
+    <script src="~/Js/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Js/master.js"></script>*@
+    <script data-main="@Url.Content("~/Js/main.js")" src="~/Js/require.js"></script>
     <title>
         @RenderSection("title", false)
     </title>
     @RenderSection("script", false)
     <script>
-        $(function () {
-            $("#logIn").click(function () {
-                createDialog("/home/login");
-            });
+        function onLoad() {
+            define(["require", "exports"], function (require, exports) {
+                var Home = (function () {
+                    function Home() {
+                    }
+                    return Home;
+                })();
 
-            $("#MessageMe").click(function () {
-                location.href = "mailto:361703739@qq.com";
+                return Home;
             });
-
-            $("#SignOut").click(function () {
-                $.post("/home/SignOut", "", function () { location.href="/home/index"}, "json");
-            })
-        })
+        }
     </script>
     <style>
         .marginbottom50 {
@@ -71,7 +70,7 @@
                             <input id="MessageMe" type="button" value="Message Me" class="btn btn-primary" />
 
                         </form>
-
+                        
 
 
                     </div>
