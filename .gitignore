@@ -11,6 +11,8 @@ $RECYCLE.BIN/
 TemplateFrontend/bin/*
 TemplateFrontend/obj/*
 TemplateFrontend/logs/*
+packages/*
+Controllers/*
 
 
 # Windows Installer files
