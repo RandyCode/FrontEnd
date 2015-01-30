@@ -28,9 +28,9 @@ namespace FrontendCore
         [HttpPost]
         public JsonResult Login(string email,string pwd)  //json 格式不能传null
         {
-            //Session["User"] = string.Format("{0},{1}", email, pwd);
+            Session["User"] = string.Format("{0},{1}", email, pwd);
             //SetCookie("User", email, DateTime.Now.AddDays(1));
-            //Cache.Store("User", email + pwd);
+            //Cache.Store("User", email + pwd);  //Randy.Memcached
  
             return Json("randy"); 
         }
@@ -38,6 +38,7 @@ namespace FrontendCore
         public JsonResult SignOut()
         {
             //Cache.Remove("User");
+            Session["User"] = null;
             return Json("randy");
         }
 
@@ -45,8 +46,7 @@ namespace FrontendCore
         //[OutputCache(Duration = 5, Location = OutputCacheLocation.Client, NoStore = true)]  页面缓存 (局部缓存：做成模板页 ，刷新子页面）
         public ViewResult FirstPage()
         {          
-            //var ss = Dns.GetHostAddresses(Dns.GetHostName());
             return View();
-        }
+        }      
     }
 }

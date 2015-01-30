@@ -58,7 +58,9 @@
     <Compile Include="Cache\CacheFactory.cs" />
     <Compile Include="Cache\WebCache.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\LabController.cs" />
     <Compile Include="Controllers\ExceptionController.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="HttpHandlers\ApplicationHandler.cs" />
     <Compile Include="HttpModules\ApplicationModule.cs" />

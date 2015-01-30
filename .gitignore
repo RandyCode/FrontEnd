@@ -12,7 +12,7 @@ TemplateFrontend/bin/*
 TemplateFrontend/obj/*
 TemplateFrontend/logs/*
 packages/*
-Controllers/*
+Controllers/obj/*
 
 
 # Windows Installer files
