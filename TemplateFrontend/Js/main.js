@@ -4,11 +4,11 @@ var wait = setTimeout(function () {
         clearTimeout(wait);
 
         requirejs.config({
-            baseUrl: '/Js/',
+            //baseUrl: '/Js/',
             paths: {
                 "jquery": "/Js/utility/jquery.min",
                 "bootstrap": "/Js/bootstrap/bootstrap.min",
-                "master": "master"
+                "master": "master",
             },
             shim: {
                 'jquery': { exports: '$' },
@@ -27,6 +27,8 @@ var wait = setTimeout(function () {
 
             $("#SignOut").click(function () {   $.post("/home/SignOut", "", function () { location.href = "/home/index" }, "json"); });
         });
+
+
 
     }
 }, 50);

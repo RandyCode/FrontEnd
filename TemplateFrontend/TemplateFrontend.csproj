@@ -134,6 +134,7 @@
     <Content Include="Js\bootstrap\bootstrap.js" />
     <Content Include="Js\bootstrap\bootstrap.min.js" />
     <Content Include="Js\bootstrap\npm.js" />
+    <Content Include="Js\jquery.signalR-2.2.0.min.js" />
     <Content Include="Js\main.js" />
     <Content Include="Js\master.js" />
     <Content Include="Js\require.js" />
