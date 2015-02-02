@@ -3,4 +3,89 @@
     Layout = Url.Content("~/Views/Template/base.cshtml");
 }
 
-<h2>Lab-Index</h2>
+@section script{
+    <style>
+        .chat-body {
+            overflow-y: scroll;
+            height: 555px;
+            padding: 0;
+        }
+
+        .msg-content {
+            margin-top: 14px;
+            padding: 8px;
+            padding-bottom: 4px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .msg-wrap {
+            margin-top: 0;
+            margin-bottom: 8px;
+            padding: 10px;
+        }
+
+        .msg-head {
+            z-index: 100;
+        }
+        .padding10 {
+        padding:10px;
+        }
+    </style>
+}
+
+
+@section body{
+    <div class="container padding10">
+        <div class="row container">
+            <div class="col-sm-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-globe"></span><span>&nbsp; We Chat</span></div>
+                    <div class="panel-body chat-body" id="message">
+                        <div class="clearfix msg-wrap">
+                            <div class="msg-head">
+                                <span class="label label-primary pull-left"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Randy</span>
+                                <span class="label label-default pull-left"><span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;16:31:02</span>
+                            </div>
+                            <div class="msg-content">
+                                Message Content
+                            </div>
+                        </div>
+                    </div>
+
+                    @* Input Message*@
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" id="emotion-btn" type="button">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </span>
+                        <input type="text" class="form-control" id="input-edit" placeholder="Write your send message">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" onclick="onClickSendMessage()">
+                                Send
+                                <span class="glyphicon glyphicon-send"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-list"></span>
+                        &nbsp;Online Members
+                    </div>
+                    <div class="panel-body list-body">
+                       
+                    </div>
+                    <div class="panel-footer" id="list-count">Online Number：1人</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}

@@ -15,7 +15,7 @@ namespace FrontendCore.Cache
             if (nodes == null)
                 return new WebCache();
             else
-                return new Memcache();
+                return new MemCache();
         }
     }
 }

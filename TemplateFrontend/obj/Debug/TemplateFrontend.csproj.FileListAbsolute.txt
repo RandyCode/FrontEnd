@@ -126,8 +126,6 @@ C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\TemplateFrontend.d
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\TemplateFrontend.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\TemplateFrontend.pdb
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\FrontendCore.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Newtonsoft.Json.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Net.Http.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Net.Http.Formatting.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Net.Http.WebRequest.dll
@@ -142,9 +140,7 @@ C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.WebPage
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Randy.Memcached.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Enyim.Caching.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\FrontendCore.pdb
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Net.Http.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Net.Http.Formatting.xml
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Net.Http.WebRequest.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.Helpers.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.Http.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.Http.WebHost.xml
@@ -153,13 +149,7 @@ C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.Razor.x
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.WebPages.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\System.Web.WebPages.Razor.xml
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Net.Http.resources.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.Helpers.resources.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.Http.resources.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
-C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.Mvc.resources.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.Razor.resources.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.WebPages.resources.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
@@ -167,3 +157,11 @@ C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\zh-Hans\System.Web
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\obj\Debug\TemplateFrontend.csprojResolveAssemblyReference.cache
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\obj\Debug\TemplateFrontend.dll
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\obj\Debug\TemplateFrontend.pdb
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Owin.dll
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Owin.Security.dll
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Owin.dll
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Newtonsoft.Json.dll
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Owin.xml
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Owin.Security.xml
