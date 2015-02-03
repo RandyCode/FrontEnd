@@ -20,5 +20,10 @@ namespace FrontendCore
         {
             return View();
         }
+
+        public ViewResult SignalRScript()
+        {
+            return View();
+        }
     }
 }
