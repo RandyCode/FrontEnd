@@ -12,7 +12,7 @@ namespace FrontendCore
     {
         public void Configuration(Owin.IAppBuilder app)
         {
-            //GlobalHost.HubPipeline.AddModule(new newModule());
+            GlobalHost.HubPipeline.AddModule(new HubModule());
             app.MapSignalR();
         }
     }

@@ -43,43 +43,92 @@
             margin-top: -1px;
             margin-bottom: 0;
         }
-
+        a:hover {
+        
+        }
     </style>
     <script>
-        function pageInit() {
-            $.post('SignalRScript', null, function (data) {
+    function pageInit() {
+        $.post('SignalRScript', null, function (data) {
 
-                $('#container').append(data);
-
-
-                var chat = $.connection.chathub;
-
-                //分发消息
-                chat.client.broadcastMessage = function (name, message) {
-
-                    $('#message').append("<div class='clearfix msg-wrap'><div class='msg-head'>"
-                        + "<span class='label label-primary pull-left'><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;" + name + "</span>"
-                        + "<span class='label label-default pull-left'><span class='glyphicon glyphicon-time'></span>&nbsp;&nbsp;@DateTime.Now</span></div>"
-                        + "<div class='msg-content'>" + message + "</div>"
-                    + "</div></div>");
+            $('#container').append(data);
 
 
-                };
+            var chat = $.connection.chathub;
 
-                //发送消息
-                $.connection.hub.start().done(function () {
-                    $('#sendmessage').click(function () {
-                        chat.server.sendAll('@(Session["User"])', $('#msg').val());
-                        $('#msg').val('').focus();
-                    });
+            //分发消息
+            chat.client.broadcastMessage = function (name, message) {
+
+                $('#message').append("<div class='clearfix msg-wrap'><div class='msg-head'>"
+                    + "<span class='label label-primary pull-left'><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;" + name + "</span>"
+                    + "<span class='label label-default pull-left'><span class='glyphicon glyphicon-time'></span>&nbsp;&nbsp;@DateTime.Now</span></div>"
+                    + "<div class='msg-content'>" + message + "</div>"
+                + "</div></div>");
+
+
+            };
+
+            //user
+            chat.client.broadcastUserMessage = function (name, message) {
+
+                $('#message').append("<div class='clearfix msg-wrap'><div class='msg-head'>"
+                    + "<span class='label label-primary pull-left'><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;" + name + "</span>"
+                    + "<span class='label label-default pull-left'><span class='glyphicon glyphicon-time'></span>&nbsp;&nbsp;@DateTime.Now</span></div>"
+                    + "<div class='msg-content'>1111111" + message + "</div>"
+                + "</div></div>");
+
+
+            };
+
+
+            chat.client.addList = function (connectionId, name) {
+                var li = "<li id='" + connectionId + "'><a>" + name + "</a></li>";
+                $("#accounts").append(li);
+                $("#list-count").html(parseInt($("#list-count").html()) + 1);
+            }
+
+            chat.client.removeList = function (connectionId) {
+                $("#" + connectionId).remove();
+                $("#list-count").html(parseInt($("#list-count").html()) - 1);
+            }
+
+            chat.client.getList = function (userList) {
+                var li = "";
+                $.each(userList, function (index, data) {
+                    li += "<li id='" + data.id + "'><a>" + data.name + "</a></li>";
+                });
+                $("#accounts").html(li);
+                $("#list-count").html(userList.length);
+            }
+
+            //发送消息
+            $.connection.hub.start().done(function () {
+
+                chat.server.userConnected('@(Session["User"])');
+
+                $('#sendmessage').click(function () {
+
+                    var user = '@(Session["User"])';
+                    if (user == null || user == "") {
+                        alertInfo("#container","Send error,please login first.")                   
+                        return;
+                    }
+
+                    chat.server.sendAll($('#msg').val());
+
+                    //chat.server.sendUser([chat.connection.id], $('#msg').val());
+                    $('#msg').val('').focus();
+                   
                 });
 
+            });
 
 
 
-            }, 'html');
-        }
-    </script>
+        }, 'html');
+    }
+</script>
+@*<script src="~/Js/utility/jquery.min.js"></script>*@
 }
 
 
@@ -132,7 +181,7 @@
                         @*<li class=""><a>123</a></li>*@
                     </ul>
 
-                    <div class="panel-footer" id="list-count">Online Number：1人</div>
+                    <div class="panel-footer">Online Number：<span id="list-count">0</span>人</div>
                 </div>
             </div>
         </div>

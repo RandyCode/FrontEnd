@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="master.js" />
+
 var wait = setTimeout(function () {
     if (document.body != null) {
         clearTimeout(wait);
@@ -23,15 +24,14 @@ var wait = setTimeout(function () {
         });
 
         require(['master', 'bootstrap'], function () {
-
+            console.log("main.js");
             $("#logIn").click(function () { createDialog("/home/login"); });
 
             $("#MessageMe").click(function () { location.href = "mailto:361703739@qq.com"; });
 
             $("#SignOut").click(function () { $.post("/home/SignOut", "", function () { location.href = "/home/index" }, "json"); });
-            
-
-            var ddd = pageInit();
+              
+            pageInit();
         });
    
     }

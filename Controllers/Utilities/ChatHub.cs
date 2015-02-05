@@ -1,4 +1,4 @@
-﻿
+﻿using System.Net.Http;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using System;
@@ -6,32 +6,76 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace FrontendCore
 {
     [HubName("chathub")]
-    public class ChatHub:Hub
+    public class ChatHub : Hub
     {
-        public void SendAll(string sender, string message)
+        /// <summary>
+        /// <string,string> name ,connectionId
+        /// </summary>
+        static Dictionary<string, string> UserList { get; set; }
+
+        public ChatHub()
         {
+
+            if (UserList == null)
+            {
+                UserList = new Dictionary<string, string>();
+            }
+        }
+
+        public void UserConnected(string name)   
+        {
+            name = HttpUtility.HtmlEncode(name);
+
+            if (!UserList.ContainsKey(Context.ConnectionId))
+            {
+                Clients.Others.addList(Context.ConnectionId, name);
+
+                Clients.Caller.getList(UserList.Select(p => new { id = p.Key, name = p.Value }).ToList());
+
+                UserList.Add(Context.ConnectionId, name);
+            }
+
+        }
+
+
+        public override Task OnDisconnected(bool stopCalled)
+        {
+            Clients.All.removeList(Context.ConnectionId);
+
+            UserList.Remove(Context.ConnectionId);
+
+            return base.OnDisconnected(stopCalled);
+        }
+
+        public Dictionary<string, string> GetUserList()
+        {
+            return UserList;
+        }
+
+
+        public void SendAll(string message)
+        {
+            var sender = UserList[Context.ConnectionId];
             //所有连接的客户端
             Clients.All.broadcastMessage(sender, message);
 
-            //接受信息对象
-            //Clients.Client(Context.ConnectionId) //指定客户端
-            //Clients.Others  //除了调用的客户端
-            //Clients.Client //仅调用的客户端
-            //Clients.Group(groupname).broadcastMessage();
         }
 
-        public void SendUser(string[] userId, string sender, string message)
+        public void SendUser(string[] connectionIds, string message)
         {
-            Clients.Users(userId.ToList()).broadcastMessage(sender,message);
+            var sender = UserList[Context.ConnectionId];
+            Clients.Clients(connectionIds.ToList()).broadcastUserMessage(sender,message);
         }
 
-        public void SendGroup(string[] groupName, string sender, string message)
+        public void SendGroup(string[] groupName, string message)
         {
-            Clients.Groups(groupName.ToList()).broadcastMessage(sender, message);
+            var sender = UserList[Context.ConnectionId];
+            Clients.Groups(groupName.ToList()).broadcastGroupMessage(sender, message);
         }
 
         public Task JoinGroup(string groupName)
@@ -43,6 +87,6 @@ namespace FrontendCore
         {
             return Groups.Remove(Context.ConnectionId, groupName);
         }
-    
+
     }
 }
