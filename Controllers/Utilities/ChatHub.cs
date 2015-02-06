@@ -33,11 +33,12 @@ namespace FrontendCore
 
             if (!UserList.ContainsKey(Context.ConnectionId))
             {
+                UserList.Add(Context.ConnectionId, name);
+
                 Clients.Others.addList(Context.ConnectionId, name);
 
                 Clients.Caller.getList(UserList.Select(p => new { id = p.Key, name = p.Value }).ToList());
 
-                UserList.Add(Context.ConnectionId, name);
             }
 
         }
