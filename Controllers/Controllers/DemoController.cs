@@ -18,6 +18,8 @@ namespace FrontendCore
     {
         public ViewResult index()
         {
+            GitService.IService1 service = new GitService.Service1Client();
+            service.ThrowFault();
             return View();
         }
     }

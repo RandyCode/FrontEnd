@@ -165,3 +165,4 @@ C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Newtonsoft.Json.dl
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Owin.xml
 C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Microsoft.Owin.Security.xml
+C:\Users\Randy\Documents\GitHub\Frontend\TemplateFrontend\bin\Newtonsoft.Json.xml

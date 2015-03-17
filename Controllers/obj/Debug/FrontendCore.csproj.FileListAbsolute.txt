@@ -41,4 +41,4 @@ C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\Microsoft.Owin.xml
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\Microsoft.Owin.Security.xml
 C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\Newtonsoft.Json.xml
-C:\Users\Randy\Documents\GitHub\Frontend\Controllers\obj\Debug\FrontendCore.csprojResolveAssemblyReference.cache
+C:\Users\Randy\Documents\GitHub\Frontend\Controllers\bin\FrontendCore.dll.config

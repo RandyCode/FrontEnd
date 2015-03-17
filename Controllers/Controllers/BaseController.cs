@@ -8,6 +8,8 @@ using FrontendCore.Models;
 using Randy.Memcached;
 using FrontendCore.Cache;
 using FrontendCore.Utilities;
+using System.ServiceModel;
+using System.ServiceModel.Web;
 
 namespace FrontendCore
 {
@@ -67,10 +69,40 @@ namespace FrontendCore
         {
             filterContext.ExceptionHandled = true;
             ErrorModel model = new ErrorModel();
-            model.Message = filterContext.Exception.Message;
-            model.Target = filterContext.Exception.TargetSite.ToString();
+
+            var wcfException = filterContext.Exception as FaultException<ExceptionDetail>;
+            if (wcfException != null)
+            {
+
+                model.Message = GetExceptionDetail(wcfException.Detail);
+            }
+            else
+            {
+                model.Message = GetExceptionDetail(filterContext.Exception);
+            }
+
             filterContext.Result = View("~/Views/Exception/base.cshtml", model);
 
+        }
+
+        private string GetExceptionDetail(ExceptionDetail ex)
+        {
+            string str = string.Concat(ex.Message, "\r\n", ex.StackTrace);
+            if (ex.InnerException != null)
+            {
+                str = string.Concat(str, this.GetExceptionDetail(ex.InnerException));
+            }
+            return str;
+        }
+
+        private string GetExceptionDetail(Exception ex)
+        {
+            string str = string.Concat(ex.Message, "\r\n", ex.StackTrace);
+            if (ex.InnerException != null)
+            {
+                str = string.Concat(str, this.GetExceptionDetail(ex.InnerException));
+            }
+            return str;
         }
 
 
