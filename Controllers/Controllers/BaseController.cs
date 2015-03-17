@@ -87,7 +87,7 @@ namespace FrontendCore
 
         private string GetExceptionDetail(ExceptionDetail ex)
         {
-            string str = string.Concat(ex.Message, "\r\n", ex.StackTrace);
+            string str = string.Concat(ex.Message, "  "); // ex.StackTrace
             if (ex.InnerException != null)
             {
                 str = string.Concat(str, this.GetExceptionDetail(ex.InnerException));
@@ -97,7 +97,7 @@ namespace FrontendCore
 
         private string GetExceptionDetail(Exception ex)
         {
-            string str = string.Concat(ex.Message, "\r\n", ex.StackTrace);
+            string str = string.Concat(ex.Message, "  "); //ex.StackTrace
             if (ex.InnerException != null)
             {
                 str = string.Concat(str, this.GetExceptionDetail(ex.InnerException));
