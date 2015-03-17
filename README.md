@@ -1,6 +1,6 @@
 ## Frontend ##
-Asp.net mvc 
-bootstrat
-requireJs
-signalR
+- Asp.net mvc  enter
+- bootstrat
+- requireJs
+- signalR
 
